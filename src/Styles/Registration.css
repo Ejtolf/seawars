@@ -1,0 +1,95 @@
+.Registration {
+  text-align: center;
+  animation: Appearance 1s;
+}
+
+input {
+  font-size: 24px;
+}
+
+@keyframes Appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0);
+  }
+}
+
+.registration-title {
+  color: blue;
+}
+
+.relevant-input {
+  color: black;
+}
+
+.not-relevant-input {
+  animation: NotRelevantInputAnimation 0.5s;
+}
+
+.nn-err-label {
+  color: red;
+  animation: NNErrAnimation 1s;
+  animation-fill-mode: forwards;
+}
+
+.nn-ok-label {
+  animation: NNOkAnimation 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes NNOkAnimation {
+  0% {
+    color: red;
+  }
+  100% {
+    color: lime;
+  }
+}
+
+@keyframes NNErrAnimation {
+  0% {
+    color: lime;
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    color: red;
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes NotRelevantInputAnimation {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: white;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: white;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.accept-button {
+  color: white;
+  background-color: lime;
+  font-size: 24px;
+}
